@@ -9,6 +9,11 @@ pub fn load(day: &str) -> String {
     fs::read_to_string(&file).unwrap_or_else(|_| panic!("Error reading file {}", file))
 }
 
+pub fn load_example(day: &str) -> String {
+    let file = format!("examples/{}.txt", day);
+    fs::read_to_string(&file).unwrap_or_else(|_| panic!("Error reading example {}", file))
+}
+
 pub trait Solution {
     fn name(&self) -> String;
     fn part_a(&self) -> String;
