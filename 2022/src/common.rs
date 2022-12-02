@@ -16,8 +16,8 @@ pub fn load_example(day: &str) -> String {
 
 pub trait Solution {
     fn name(&self) -> String;
-    fn part_a(&self) -> String;
-    fn part_b(&self) -> String;
+    fn part_a(&self, input: String) -> String;
+    fn part_b(&self, input: String) -> String;
 }
 
 pub fn time_unit(time: u128) -> String {
